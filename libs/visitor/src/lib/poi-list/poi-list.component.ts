@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { PoiActions } from '@packt/poi';
+import { PoiActions, PoiSelectors } from '@packt/poi';
 
 @Component({
   selector: 'packt-poi-list',
@@ -10,6 +10,7 @@ import { PoiActions } from '@packt/poi';
 export class PoiListComponent implements OnInit{
 
   private readonly store = inject(Store); 
+  public readonly pois$ = this.store.select(PoiSelectors.selectAllPoi);
 
   ngOnInit(): void {
       this.store.dispatch(PoiActions.initPoi())
