@@ -17,7 +17,6 @@ import { VisitorComponent } from './visitor.component';
     MatIconModule, 
     MatListModule,
     RouterModule.forChild([{ path: '', component: VisitorComponent }])],
-    declarations: [VisitorComponent], 
-    exports: [VisitorComponent]
+    declarations: [VisitorComponent]
 })
 export class LibsVisitorModule {}
