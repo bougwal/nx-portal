@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { PoiSelectors } from '@packt/poi';
 
 @Component({
   selector: 'packt-map',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
-
+  
+  private readonly store = inject(Store);
+  public poi$ = this.store.select(PoiSelectors.selectEntity); 
 }
