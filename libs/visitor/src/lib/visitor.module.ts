@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { VisitorComponent } from './visitor.component';
 import { PoiModule } from '@packt/poi';
 import { PoiListComponent } from './poi-list/poi-list.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   imports: [
@@ -19,8 +21,10 @@ import { PoiListComponent } from './poi-list/poi-list.component';
     MatIconModule, 
     MatListModule,
     PoiModule,
+    GoogleMapsModule,
     RouterModule.forChild([{ path: '', component: VisitorComponent }])
+
   ],
-    declarations: [VisitorComponent, PoiListComponent]
+    declarations: [VisitorComponent, PoiListComponent, MapComponent]
 })
 export class LibsVisitorModule {}
