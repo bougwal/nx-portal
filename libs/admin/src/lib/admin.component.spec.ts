@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AdminComponent } from './admin.component';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('AdminComponent', () => {
   let component: AdminComponent;
@@ -8,6 +9,7 @@ describe('AdminComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AdminComponent],
+      providers: [provideMockStore()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AdminComponent);
@@ -19,3 +21,5 @@ describe('AdminComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+

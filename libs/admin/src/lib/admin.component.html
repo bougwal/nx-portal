@@ -1,1 +1,3 @@
-<p>admin works!</p>
+<div class="chart" *ngIf="dataSets.length">
+    <canvas height="100" baseChart [datasets]="dataSets" [labels]="labels" type="pie"></canvas>
+</div>
